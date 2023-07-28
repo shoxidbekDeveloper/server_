@@ -28,5 +28,8 @@ io.on("connection", (socket) => {
     socket.to(room).emit("respone_message", message);
   });
 });
+app.use("/", (req, res) => {
+  res.send("Salom");
+});
 // server.listen(port, () => console.log(`Listening on port ${port}`));
 module.exports.handler = serverless(app);
